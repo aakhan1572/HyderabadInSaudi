@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% load thumbnail %}
+{% load static %}
+{% load humanize %}
+{% block content %}
+
+<div class="container-fluid">
+<div class="grid grid-cols-8 gap-4 divide-x  m-6">
+    
+        <div class="col-span-3 border-style: double border-4 border-red-600 border-info-500/100;">
+            <img  src="{{ bbgprojects.cover_photo.url}}" alt="" style="min-height : 500px;max-height : 700px rounded-full">
+        
+        </div>
+
+
+    <div class="border : double border-3  rounded-full  ring-4 ring-red-700  col-start-4 col-span-6 border-style:  border-4 border-red-600 border-red-100/60; ">
+        <div class="Justify-center">
+            <h1 class="p-4 text-center">
+                Name : {{ bbgprojects.fullname}}
+            </h1>
+        </div>
+        
+        <div class="Justify-center">
+            <h2 class="p-4 text-center">
+                City : {{ bbgprojects.citycode}}
+            </h2>
+        </div>
+
+
+        <div class="Justify-center">
+            <h2 class="p-4 text-center">
+                Landmark : {{ bbgprojects.landmark}}
+            </h2>
+        </div>
+
+        <div class="Justify-center">
+            <h2 class="p-4 text-center">
+                Price (Total Price) : {{ bbgprojectss.price | intcomma}}
+            </h2>
+        </div>
+        <div class="Justify-center">
+            <h2 class="p-4 text-center">
+                Description : {{ bbgproject.Description|slice:":45"}}
+            </h2>
+        </div>
+        
+        <div class="Justify-center">
+            <h2 class="p-4 text-center">
+                <a href="{% url 'contactmes' %}" class="btn btn-outline-info font-weight-bold text-info rounded-pill" >Contact me</a>
+                <a href="{% url 'interested' bbgprojects.id %}" class="btn btn-outline-info font-weight-bold text-info rounded-pill" >Get phone Details</a>
+                {% if uservalue %}
+                    <a href="{% url 'updatead' bbgprojects.id %}" class="btn btn-outline-info font-weight-bold text-info rounded-pill">Update</a>      
+
+                    <a href="{% url 'delete_ad' bbgprojects.id %}" onclick="return confirm('Are you sure you want to delete Your Posting')" class="btn btn-outline-danger font-weight-bold text-info rounded-pill text-4xl"><i class="fa fa-trash" aria-hidden="true"></i> Delete</a>
+
+
+                {% endif %}
+            </h2>
+        </div>
+    </div>
+
+
+</div>
+        <h2> {{ bbgprojects.fullname}} Details Images found  {{ bbgprojects_list.count}} </h2>
+
+        <hr />
+        <br>
+ 
+        <div class="bg-gray-300">
+            <div class="m-auto flex">
+              <div class="overflow-auto w-full flex items-center">
+                <div class="p-15">
+                    {% for i in bbgImageImage_list %}
+                        <a href="{{ i.images.url }}">
+                            <img class="card-img-top mb-8 img-fluid" src="{{ i.images.url }}" alt="Card image cap" >
+                        </a>
+                    {% empty %}
+                        <p> No Images Found </p>
+                    {% endfor %}
+                </div>
+
+              </div>
+
+            </div>
+          </div> 
+
+
+
+
+          
+    
+{% endblock %}
+    
