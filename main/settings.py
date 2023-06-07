@@ -13,8 +13,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 env = environ.Env(
     # set casting, default value
     DEBUG=(bool, False),
-    SECRET_KEY=str,
-    AUTH_USER_MODEL=str
 
 )
 
@@ -88,8 +86,8 @@ DATABASES = {
 }
 
 #CSRF_TRUSTED_ORIGINS= ["https://web-production-c07f.up.railway.app"]
-from accounts.models import User
-AUTH_USER_MODEL= User
+
+AUTH_USER_MODEL= 'accounts.User'
 
 
 AUTH_PASSWORD_VALIDATORS = [
