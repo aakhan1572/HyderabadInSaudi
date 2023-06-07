@@ -88,7 +88,9 @@ DATABASES = {
 }
 
 #CSRF_TRUSTED_ORIGINS= ["https://web-production-c07f.up.railway.app"]
-AUTH_USER_MODEL= env('AUTH_USER_MODEL')
+from accounts.models import User
+AUTH_USER_MODEL= User
+
 
 AUTH_PASSWORD_VALIDATORS = [
     {
