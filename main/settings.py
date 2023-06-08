@@ -150,7 +150,8 @@ STATICFILES_STORAGE=env('STATICFILES_STORAGE')
 AWS_LOCATION = 'static'
 AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 
-
+if not DEBUG:
+    CSRF_TRUSTED_ORIGINS = ['https://hyderabadinsaudi-production.up.railway.app']
 
 
 """
