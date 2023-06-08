@@ -16,7 +16,7 @@ def home(request):
     #expatad_count = expatad_filter.qs.count()
     
     #expatads = expatad_filter.qs
-    paginator = Paginator(expatads, 10)
+    paginator = Paginator(expatads, 8)
     page = request.GET.get('page')
     paged_expatads = paginator.get_page(page)
     expatad_count = expatads.count()

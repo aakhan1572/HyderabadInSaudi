@@ -27,14 +27,14 @@ def expads(request, slug=None):
         #expatads = Expatad.objects.filter(category=categories, is_active=True)
         expatad_filter = Expatadfilter(request.GET, queryset=Expatad.objects.all().filter(category=categories,is_active=True))
         expatads = expatad_filter.qs
-        paginator = Paginator(expatads, 10)
+        paginator = Paginator(expatads, 8)
         page = request.GET.get('page')
         paged_expatads = paginator.get_page(page)
         expatad_count = expatads.count()
     else:
         expatad_filter = Expatadfilter(request.GET, queryset=Expatad.objects.all().filter(is_active=True))
         expatads = expatad_filter.qs
-        paginator = Paginator(expatads, 10)
+        paginator = Paginator(expatads, 8)
         page = request.GET.get('page')
         paged_expatads = paginator.get_page(page)
         expatad_count = expatads.count()
