@@ -81,15 +81,20 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = "main.wsgi.application"
-DATABASES = {
-    "default": dj_database_url.config(default=env("DATABASE_URL"), conn_max_age=1800,conn_health_checks=True),
-}
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'railway',                      
+        'USER': 'postgres',
+        'PASSWORD': 'lNeVsld6FcP7M60Ti6EP',
+        'HOST': 'containers-us-west-36.railway.app',
+        'PORT': '5876',
+    }
+}
 #CSRF_TRUSTED_ORIGINS= ["https://web-production-c07f.up.railway.app"]
 
-AUTH_USER_MODEL= 'accounts.User'
-
-
+AUTH_USER_MODEL='accounts.User'
 AUTH_PASSWORD_VALIDATORS = [
     {
         "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
@@ -146,7 +151,9 @@ AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 
 
 """
-
+DATABASES = {
+    "default": dj_database_url.config(default=env("DATABASE_URL"), conn_max_age=1800,conn_health_checks=True),
+}
 ENGINE=django.db.backends.postgresql
 DB_NAME=hydinsaudiaws
 DB_USER=hydsuperuser
