@@ -14,7 +14,7 @@ def home(request):
     expatads = expatad_filter.qs
     expatad_count = expatads.count()
     #expatad_count = expatad_filter.qs.count()
-    print('Filter using')
+    
     #expatads = expatad_filter.qs
     paginator = Paginator(expatads, 10)
     page = request.GET.get('page')
@@ -25,6 +25,7 @@ def home(request):
         'expatads_list': expatad_filter.qs,
         'expatads': paged_expatads,
         'expatad_count' : expatad_count,
-    }    
+    }
+    print('Filter using')
     return render(request, 'home.html', context)
 
