@@ -149,9 +149,7 @@ DEFAULT_FILE_STORAGE=env('DEFAULT_FILE_STORAGE')
 STATICFILES_STORAGE=env('STATICFILES_STORAGE')
 AWS_LOCATION = 'static'
 AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
-SECURE_SSL_REDIRECT= True
-SESSION_COOKIE_SECURE= True
-CSRF_COOKIE_SECURE= True
+
 if not DEBUG:
     CSRF_TRUSTED_ORIGINS = ['https://hyderabadinsaudi-production.up.railway.app','https://www.hydinsaudi.com','https://hydinsaudi.com']
 
