@@ -150,11 +150,12 @@ STATICFILES_STORAGE=env('STATICFILES_STORAGE')
 AWS_LOCATION = 'static'
 AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 
+
+"""
 if not DEBUG:
     CSRF_TRUSTED_ORIGINS = ['https://hyderabadinsaudi-production.up.railway.app','https://www.hydinsaudi.com','https://hydinsaudi.com']
 
 
-"""
 DATABASES = {
     "default": dj_database_url.config(default=env("DATABASE_URL"), conn_max_age=1800,conn_health_checks=True),
 }
