@@ -10,7 +10,7 @@
             <div class="container-fluid">
                 <div class="row">
 
-                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 ml-auto">
                         <div class="logo">
                             <figure>
                                 <a href="{% url 'home' %}" class="light-logo">
@@ -20,14 +20,14 @@
                         </div>
                         
                         <a href="{% url 'bbglist' %}" class="btn btn-outline-danger text-uppercase font-weight-bold">HMDA DTCP RERA Projects</a> 
-                        <a href="{% url 'bbgreg' %}" class="btn btn-outline-danger text-uppercase font-weight-bold">Real Estate Associate</a> 
+                        <a href="{% url 'bbgreg' %}" class="btn btn-outline-danger text-uppercase font-weight-bold">Become Associate</a> 
                         {% if user.is_staff %}
                             <a href="{% url 'bbgads' %}" class="btn btn-outline-danger text-uppercase font-weight-bold">Create BBG ads</a> 
                         {% endif %}
                    </div>
 
 
-                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 mr-auto">
 
                            <div class="login-option">
 <!-- 
