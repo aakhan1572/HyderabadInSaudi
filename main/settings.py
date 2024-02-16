@@ -87,11 +87,22 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'railway',                      
         'USER': 'postgres',
-        'PASSWORD': 'lNeVsld6FcP7M60Ti6EP',
+        'PASSWORD': 'ef2Cd5cgdeCf3fAdEAAEbGgad4cf4ABf',
         'HOST': 'containers-us-west-36.railway.app',
         'PORT': '5876',
     }
 }
+
+""" DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'railway',                      
+        'USER': 'postgres',
+        'PASSWORD': 'lNeVsld6FcP7M60Ti6EP',
+        'HOST': 'containers-us-west-36.railway.app',
+        'PORT': '5876',
+    }
+} """
 #CSRF_TRUSTED_ORIGINS= ["https://web-production-c07f.up.railway.app"]
 
 AUTH_USER_MODEL='accounts.User'
