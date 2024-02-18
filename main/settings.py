@@ -88,8 +88,8 @@ DATABASES = {
         'NAME': 'railway',                      
         'USER': 'postgres',
         'PASSWORD': 'ef2Cd5cgdeCf3fAdEAAEbGgad4cf4ABf',
-        'HOST': 'containers-us-west-36.railway.app',
-        'PORT': '5876',
+        'HOST': 'monorail.proxy.rlwy.net',
+        'PORT': '42328',
     }
 }
 
