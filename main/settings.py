@@ -20,7 +20,8 @@ env = environ.Env(
 environ.Env.read_env(BASE_DIR/'.env')
 DEBUG= env('DEBUG')
 SECRET_KEY= env('SECRET_KEY')
-ALLOWED_HOSTS=['hyderabadinsaudi-production.up.railway.app','104.196.232.237','34.102.136.180','hydinsaudi.com','127.0.0.1']
+#['hyderabadinsaudi-production.up.railway.app','34.102.136.180','104.196.232.237','hydinsaudi','hydinsaudi.com','www.hydinsaudi.com','https://hydinsaudi.com']
+ALLOWED_HOSTS=['hyderabadinsaudi-production.up.railway.app','104.196.232.237','rvwmw8co.up.railway.app','34.102.136.180','hydinsaudi.com','127.0.0.1','www.hydinsaudi.com','https://hydinsaudi.com']
 #ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS').split(' ')
 #ALLOWED_HOSTS=['web-production-c07f.up.railway.app','127.0.0.1','localhost','https://web-production-8948.up.railway.app']
 #ALLOWED_HOSTS=['web-production-c07f.up.railway.app','web-production-c07f.up.railway.app/','127.0.0.1','localhost']
