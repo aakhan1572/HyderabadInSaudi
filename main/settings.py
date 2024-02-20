@@ -21,7 +21,7 @@ environ.Env.read_env(BASE_DIR/'.env')
 DEBUG= env('DEBUG')
 SECRET_KEY= env('SECRET_KEY')
 #['hyderabadinsaudi-production.up.railway.app','34.102.136.180','104.196.232.237','hydinsaudi','hydinsaudi.com','www.hydinsaudi.com','https://hydinsaudi.com']
-ALLOWED_HOSTS=['hyderabadinsaudi-production.up.railway.app','104.196.232.237','rvwmw8co.up.railway.app','34.102.136.180','hydinsaudi.com','127.0.0.1','www.hydinsaudi.com','https://hydinsaudi.com']
+ALLOWED_HOSTS=['hyderabadinsaudi-production.up.railway.app','34.87.74.158','104.196.232.237','34.102.136.180','hydinsaudi.com','127.0.0.1','www.hydinsaudi.com','https://hydinsaudi.com','https://www.hydinsaudi.com']
 #ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS').split(' ')
 #ALLOWED_HOSTS=['web-production-c07f.up.railway.app','127.0.0.1','localhost','https://web-production-8948.up.railway.app']
 #ALLOWED_HOSTS=['web-production-c07f.up.railway.app','web-production-c07f.up.railway.app/','127.0.0.1','localhost']
@@ -83,6 +83,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "main.wsgi.application"
 
+AUTH_USER_MODEL='accounts.User'
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -95,9 +97,6 @@ DATABASES = {
 }
 
 
-#CSRF_TRUSTED_ORIGINS= ["https://web-production-c07f.up.railway.app"]
-
-AUTH_USER_MODEL='accounts.User'
 AUTH_PASSWORD_VALIDATORS = [
     {
         "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
@@ -150,11 +149,11 @@ AWS_S3_REGION_NAME=env('AWS_S3_REGION_NAME')
 AWS_STORAGE_BUCKET_NAME=env('AWS_STORAGE_BUCKET_NAME')
 DEFAULT_FILE_STORAGE=env('DEFAULT_FILE_STORAGE')
 STATICFILES_STORAGE=env('STATICFILES_STORAGE')
-AWS_LOCATION = 'static'
+AWS_LOCATION='static'
 AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 
 if not DEBUG:
-    CSRF_TRUSTED_ORIGINS = ['https://hyderabadinsaudi-production.up.railway.app','hydinsaudi.com','104.196.232.237','34.102.136.180','https://hydinsaudi.com']
+    CSRF_TRUSTED_ORIGINS = ['https://hyderabadinsaudi-production.up.railway.app','hydinsaudi.com','34.87.74.158','104.196.232.237','34.102.136.180','https://hydinsaudi.com','https://www.hydinsaudi.com']
 
 """
 if not DEBUG:
