@@ -12,7 +12,7 @@ env = environ.Env()
 BASE_DIR = Path(__file__).resolve().parent.parent
 env = environ.Env(
     # set casting, default value
-    DEBUG=(bool, True),
+    DEBUG=(bool, False),
 
 )
 
@@ -95,7 +95,6 @@ DATABASES = {
         'PORT': '42328',
     }
 }
-
 
 AUTH_PASSWORD_VALIDATORS = [
     {
