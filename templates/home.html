@@ -31,13 +31,15 @@
                         </div> <!-- card.// -->
                         <div class="card">
                             <div class="card-body">
-                                <ul class="list-menu">
+                                <!-- <ul class="list-menu"> -->
                                     {% if links %}
                                         {% for category in links %}
-                                            <a href="{{ category.get_url }}" class="btn btn-outline-info text-uppercase font-weight-bold text-2xl m-2 hover:scale-125 duration-1000 ">{{ category.name }}</a> 
+                                        
+                                            <a href="{{ category.get_url }}" class="btn btn-outline-info text-uppercase font-weight-bold text-2xl m-1 hover:scale-125 duration-1000 ">{{ category.name }}</a> 
+                                        
                                         {% endfor %}
                                     {% endif %}
-                                </ul>
+                                <!--</ul>-->
                             </div><!-- card-body.// -->
                         </div>
                     </aside> <!-- col.// -->

@@ -2,7 +2,7 @@
 <!--Main Wrapper-->
 <div class="wrapper">
     <div class="row justify-content-center bg-sky-100">
-		<h1 class="text-info text-uppercase font-weight-bold"> Hyderabadies In Saudi Arabia,Dubai,Qatar,Oman,Bahrain and Gulf</h>
+		<h1 class="text-info text-uppercase font-weight-bold"> Hyderabadies In Saudi Arabia,Oman and MiddleEast</h>
 	</div>
     <!-- Header Start -->
     <header id="header">
@@ -10,7 +10,8 @@
             <div class="container-fluid">
                 <div class="row">
 
-                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <!--<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">-->
+                        <div class="login-option">
                         <div class="logo">
                             <figure>
                                 <a href="{% url 'home' %}" class="light-logo">
@@ -19,30 +20,19 @@
                             </figure>
                         </div>
                         
-                        <a href="{% url 'bbglist' %}" class="btn btn-outline-danger text-uppercase font-weight-bold">HMDA DTCP RERA Projects</a> 
-                        <a href="{% url 'bbgreg' %}" class="btn btn-outline-danger text-uppercase font-weight-bold">Become Associate</a> 
+                        <a href="{% url 'bbglist' %}" class="btn btn-outline-danger text-uppercase font-weight-bold text2xl">BBG Projects</a> 
+                        <a href="{% url 'bbgreg' %}" class="btn btn-outline-danger text-uppercase font-weight-bold text2xl">Become BBG Associate</a> 
                         {% if user.is_staff %}
-                            <a href="{% url 'bbgads' %}" class="btn btn-outline-danger text-uppercase font-weight-bold">Create BBG ads</a> 
+                            <a href="{% url 'bbgads' %}" class="btn btn-outline-danger text-uppercase font-weight-bold text2xl">Create BBG ads</a> 
                         {% endif %}
-                   </div>
+                        </div>
+                    <!--</div>-->
 
 
-                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 nav navbar-nav navbar-right">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 
                            <div class="login-option">
-<!-- 
-                            <button type="button" class="btn btn-outline-info text-uppercase font-weight-bold dropdown-toggle" data-toggle="dropdown"> 
-                                <i class="fa fa-bars"></i> All category 
-                            </button>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="{% url 'expads' %}">All Products </a>
-                                {% for category in links %}
-                                    <a class="dropdown-item" href="{{ category.get_url }}">{{ category.name }} </a>
-                                {% endfor %}
-                            </div>
- -->
-
-                           
+                          
                            <a href="{% url 'addads' %}" class="btn btn-outline-danger text-uppercase font-weight-bold text2xl">Place Your Ads</a> 
 
                             {% if user.is_authenticated %}
